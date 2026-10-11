@@ -1,0 +1,923 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alireza Karami</title>
+<!-- hosted-only:start -->
+<meta name="description" content="Alireza Karami is a Computer Science (Artificial Intelligence) undergraduate at Taylor's University researching machine learning for healthcare: explainable clinical decision support, federated learning and healthcare analytics.">
+<meta name="author" content="Alireza Karami">
+<meta name="theme-color" content="#FBF4EC">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Alireza Karami">
+<meta property="og:description" content="Undergraduate researcher in AI for healthcare at Taylor's University, Malaysia.">
+<!-- After you choose a web address, uncomment these lines and fill them in:
+<link rel="canonical" href="https://YOUR-USERNAME.github.io/">
+<meta property="og:url" content="https://YOUR-USERNAME.github.io/">
+<meta property="og:image" content="https://YOUR-USERNAME.github.io/assets/portrait.jpg">
+-->
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%232A1A12'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='27' font-weight='600' fill='%23FBF4EC' text-anchor='middle'%3EAK%3C/text%3E%3C/svg%3E">
+<!-- Structured data helps search engines show your name, role and profiles correctly. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Alireza Karami",
+  "jobTitle": "Undergraduate Researcher in Artificial Intelligence and Data Science",
+  "telephone": "+601164557105",
+  "affiliation": { "@type": "CollegeOrUniversity", "name": "Taylor's University", "address": "Selangor, Malaysia" },
+  "email": "mailto:alireza1708karami@gmail.com",
+  "knowsAbout": ["Machine learning", "Explainable AI", "Federated learning", "Clinical decision support", "Healthcare analytics", "Data science"],
+  "knowsLanguage": ["fa", "en", "ja"],
+  "sameAs": ["https://github.com/alireza1708karami-collab"]
+}
+</script>
+<!-- hosted-only:end -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..700&family=Manrope:wght@400..700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: an editorial hero (arched portrait flanked by a gradient serif title, rotating badge and a short statement),
+   an outlined-type band, then one centred reading column. One warm light theme, chosen on purpose. */
+:root {
+  --cream: #FBF4EC;
+  --paper: #FFFBF6;
+  --espresso: #2A1A12;
+  --cocoa: #6A4D3D;
+  --rule: #EADBCB;
+  --rule-strong: #D9C2AC;
+  --ember: #C8601E;
+  --rust: #6E3519;
+  --ember-soft: #F8E4D3;
+  --glow: rgba(238, 122, 40, 0.85);
+  --outline: #D7BFA8;
+  --peach: #F7E3D4;
+  --sand: #F3EAD7;
+  --sage: #E6EADB;
+  --ok: #3C7148;
+  --ok-soft: #E3EEDF;
+  --focus: #C8601E;
+
+  --display: "Cinzel", "Trajan Pro", "Times New Roman", serif;
+  --sans: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+
+  --t-xs: 0.8125rem;
+  --t-sm: 0.9375rem;
+  --t-base: 1.0625rem;
+  --radius: 18px;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--espresso);
+  font-family: var(--sans);
+  font-size: var(--t-base);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 { margin: 0; line-height: 1.2; text-wrap: balance; }
+p { margin: 0; }
+ul, ol { margin: 0; padding: 0; }
+a { color: var(--rust); text-decoration-line: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: var(--outline); }
+a:hover { text-decoration-color: var(--ember); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 6px; }
+button { font: inherit; color: inherit; }
+[hidden] { display: none !important; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.skip { position: absolute; left: 1rem; top: -4rem; background: var(--espresso); color: var(--cream); padding: 0.5rem 0.875rem; border-radius: 999px; z-index: 50; text-decoration: none; }
+.skip:focus { top: 1rem; }
+
+.wrap { max-width: 72rem; margin-inline: auto; padding-inline: clamp(1rem, 4vw, 2.75rem); }
+
+.grad {
+  background: linear-gradient(90deg, var(--rust), var(--ember));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.grad-rev {
+  background: linear-gradient(90deg, var(--ember), var(--rust));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+/* ---------- buttons ---------- */
+.pill-solid, .pill-outline {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  border-radius: 999px; padding: 0.7rem 1.4rem;
+  font-size: var(--t-sm); font-weight: 600; text-decoration: none; letter-spacing: 0.01em;
+  transition: transform 0.2s, background-color 0.2s, color 0.2s;
+}
+.pill-solid { background: var(--espresso); color: var(--cream); border: 1px solid var(--espresso); }
+.pill-solid:hover { background: var(--rust); border-color: var(--rust); transform: translateY(-1px); }
+.pill-outline { border: 1px solid var(--espresso); color: var(--espresso); background: transparent; }
+.pill-outline:hover { background: var(--espresso); color: var(--cream); }
+.pill-small { padding: 0.4rem 1rem; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.btn-small {
+  border: 1px solid var(--rule-strong); background: var(--paper); color: var(--cocoa);
+  font-family: var(--mono); font-size: 0.75rem; padding: 0.15rem 0.6rem; border-radius: 999px; cursor: pointer;
+}
+.btn-small:hover { color: var(--espresso); border-color: var(--cocoa); }
+
+/* ---------- top bar ---------- */
+.topbar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 30;
+  background: color-mix(in srgb, var(--cream) 90%, transparent);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+}
+.topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem 2rem; padding-block: 1rem 0.75rem; }
+.brand { display: flex; align-items: center; gap: 0.65rem; text-decoration: none; color: var(--espresso); }
+.brand-mark {
+  width: 2.25rem; height: 2.25rem; display: grid; place-items: center;
+  background: var(--espresso); color: var(--cream); border-radius: 5px;
+  font-family: var(--display); font-weight: 700; font-size: 0.95rem;
+}
+.brand-name { font-weight: 800; font-size: 0.78rem; line-height: 1.1; letter-spacing: 0.12em; text-transform: uppercase; }
+.nav { display: flex; gap: 1.75rem; }
+.nav a { color: var(--cocoa); text-decoration: none; font-size: var(--t-sm); font-weight: 500; position: relative; padding-block: 0.25rem; }
+.nav a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 0; height: 1px; background: var(--ember); transition: right 0.25s; }
+.nav a:hover, .nav a[aria-current="true"] { color: var(--espresso); }
+.nav a:hover::after, .nav a[aria-current="true"]::after { right: 0; }
+.double-rule { height: 4px; border-top: 1px solid var(--rule-strong); border-bottom: 1px solid var(--rule-strong); }
+
+/* ---------- hero ---------- */
+.hero { padding-block: clamp(2rem, 5vw, 3.5rem) clamp(2.5rem, 5vw, 3.5rem); overflow: hidden; }
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(15rem, 19rem) minmax(0, 1fr);
+  grid-template-areas:
+    "badge photo note"
+    "left  photo right"
+    "cta   cta   cta";
+  column-gap: clamp(1.25rem, 3vw, 2.5rem);
+  row-gap: 1.75rem;
+  align-items: center;
+}
+.badge { grid-area: badge; justify-self: center; width: 10.5rem; color: var(--espresso); display: block; }
+.badge svg { display: block; width: 100%; height: auto; overflow: visible; }
+.badge-text { font-family: var(--display); font-size: 15px; font-weight: 700; letter-spacing: 0.08em; fill: var(--espresso); transform-origin: 100px 100px; animation: spin 28s linear infinite; }
+.badge:hover .badge-arrow { transform: translateY(4px); }
+.badge-arrow { transition: transform 0.25s; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.hero-photo { grid-area: photo; position: relative; margin: 0; justify-self: center; width: 100%; max-width: 19rem; isolation: isolate; }
+.hero-photo img {
+  display: block; width: 100%; height: auto; aspect-ratio: 7 / 10; object-fit: cover;
+  border-radius: 999px; background: var(--peach);
+}
+.hero-photo::before {
+  content: ""; position: absolute; inset: -14px; z-index: -1;
+  border: 1px solid var(--outline); border-radius: 999px; background: var(--paper);
+}
+.hero-photo::after {
+  content: ""; position: absolute; left: 4%; right: 4%; bottom: -16%; height: 34%; z-index: -2;
+  background: radial-gradient(closest-side, var(--glow), transparent); filter: blur(18px);
+}
+.blob {
+  position: absolute; top: 6%; left: -22%; width: 2.75rem; height: 2.5rem;
+  background: var(--espresso); border-radius: 46% 54% 58% 42% / 55% 42% 58% 45%;
+  display: grid; place-items: center;
+}
+.blob::after { content: ""; width: 0.7rem; height: 0.7rem; border-radius: 50%; background: #E9825A; }
+
+.hero-note { grid-area: note; justify-self: center; text-align: center; max-width: 17rem; display: grid; gap: 0.75rem; justify-items: center; }
+.asterisk { font-family: var(--sans); font-size: 3rem; line-height: 0.6; font-weight: 700; color: var(--espresso); }
+.hero-note p { font-weight: 600; font-size: var(--t-sm); line-height: 1.55; }
+.hero-note .hero-affil { font-weight: 500; font-size: var(--t-xs); color: var(--cocoa); }
+
+.hero-title { display: contents; }
+.t-left, .t-right { font-family: var(--display); font-weight: 600; line-height: 1; letter-spacing: 0.01em; }
+.t-left { grid-area: left; justify-self: end; display: flex; align-items: center; gap: 1rem; font-size: clamp(2.5rem, 5.5vw, 4.5rem); }
+.t-left .dash { width: clamp(3rem, 7vw, 6rem); height: 2px; background: linear-gradient(90deg, var(--rust), var(--ember)); }
+.t-right { grid-area: right; justify-self: start; display: grid; gap: 0.4rem; font-size: clamp(2rem, 3.9vw, 3.4rem); }
+.t-sub { font-size: 0.56em; letter-spacing: 0.04em; }
+
+.hero-cta { grid-area: cta; justify-self: center; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; padding-top: 0.5rem; }
+
+/* ---------- outlined type band ---------- */
+.band { overflow: hidden; padding-block: 0.25rem 0.75rem; }
+.band-track { display: flex; align-items: center; gap: 2rem; width: max-content; animation: band 60s linear infinite; }
+.band-group { display: flex; align-items: center; gap: 2rem; }
+.band-word {
+  font-family: var(--display); font-size: clamp(2.75rem, 7vw, 5.5rem); line-height: 1.15; letter-spacing: 0.03em;
+  color: transparent; -webkit-text-stroke: 1px var(--outline);
+}
+.band-line { width: 5rem; height: 1px; background: var(--outline); }
+@keyframes band { to { transform: translateX(-50%); } }
+
+/* ---------- content ---------- */
+.content { container-type: inline-size; display: grid; gap: clamp(4rem, 8vw, 6rem); padding-block: clamp(2.5rem, 5vw, 4rem) clamp(4rem, 8vw, 6rem); }
+.sec { display: grid; gap: 1.75rem; scroll-margin-top: 6.5rem; min-width: 0; }
+.sec-title {
+  justify-self: start; position: relative; padding-bottom: 0.7rem;
+  font-family: var(--display); font-weight: 600; font-size: clamp(1.75rem, 3.4vw, 2.4rem); letter-spacing: 0.02em; color: var(--espresso);
+}
+.sec-title::after {
+  content: ""; position: absolute; left: -0.25rem; right: -0.75rem; bottom: 0; height: 12px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'%3E%3Cpath d='M3 9 C 55 1, 130 2, 197 6' fill='none' stroke='%23EDB28A' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / 100% 100%;
+}
+.eyebrow { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ember); }
+.card { background: var(--paper); border: 1px solid var(--rule); border-radius: var(--radius); padding: clamp(1.25rem, 3vw, 1.75rem); }
+.prose { display: grid; gap: 1rem; max-width: 66ch; }
+
+/* stats */
+.stats { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.stat { background: var(--paper); border: 1px solid var(--rule); border-radius: var(--radius); padding: 1.25rem 1.25rem 1.1rem; display: grid; gap: 0.5rem; align-content: start; }
+.stat b { font-family: var(--sans); font-weight: 800; font-size: clamp(2rem, 4vw, 2.6rem); line-height: 1; letter-spacing: -0.02em; font-variant-numeric: lining-nums; justify-self: start; }
+.stat span { font-size: var(--t-xs); color: var(--cocoa); line-height: 1.45; }
+@container (min-width: 46rem) { .stats { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+/* about */
+.about-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.5rem; align-items: start; }
+@container (min-width: 50rem) { .about-grid { grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); gap: 2.5rem; } }
+.interests { display: grid; gap: 0.9rem; }
+.interests ul { list-style: none; display: grid; gap: 0.6rem; }
+.interests li { display: grid; grid-template-columns: 1rem minmax(0, 1fr); gap: 0.5rem; font-size: var(--t-sm); font-weight: 500; line-height: 1.45; }
+.interests li::before { content: "\2731"; color: var(--ember); font-size: 0.8rem; line-height: 1.8; }
+
+/* news */
+.news { list-style: none; display: grid; }
+.news li { display: grid; grid-template-columns: 7rem minmax(0, 1fr); gap: 1.25rem; padding-block: 1rem; border-bottom: 1px solid var(--rule); }
+.news li:first-child { padding-top: 0; }
+.news time { font-weight: 700; font-size: var(--t-xs); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ember); padding-top: 0.2rem; font-variant-numeric: tabular-nums; }
+.chip { display: inline-block; font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--rust); background: var(--ember-soft); padding: 0.1rem 0.55rem; border-radius: 999px; margin-right: 0.5rem; vertical-align: 0.1em; }
+
+/* publications */
+.note { font-size: var(--t-sm); color: var(--cocoa); }
+.pubs { display: grid; gap: 1.25rem; }
+.pub { display: grid; grid-template-columns: 5.75rem minmax(0, 1fr); gap: 1.5rem; background: var(--paper); border: 1px solid var(--rule); border-radius: 22px; padding: clamp(1.25rem, 3vw, 2rem); }
+.pub-venue { display: grid; gap: 0.35rem; align-content: start; justify-items: start; }
+.abbr { font-size: var(--t-xs); font-weight: 800; letter-spacing: 0.06em; color: var(--rust); border: 1px solid var(--ember); border-radius: 999px; padding: 0.2rem 0.65rem; min-width: 4.75rem; text-align: center; }
+.pub-venue .yr { font-size: var(--t-xs); font-weight: 600; color: var(--cocoa); padding-left: 0.2rem; }
+.pub-body { display: grid; gap: 0.8rem; min-width: 0; }
+.pub-title { font-family: var(--sans); font-weight: 700; font-size: 1.1875rem; line-height: 1.4; color: var(--espresso); }
+.meta { display: grid; gap: 0.15rem; font-size: var(--t-sm); }
+.meta .venue { color: var(--cocoa); }
+.tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.tag, .status { font-size: 0.75rem; font-weight: 600; padding: 0.15rem 0.65rem; border-radius: 999px; border: 1px solid var(--rule-strong); color: var(--cocoa); }
+.status { color: var(--ok); background: var(--ok-soft); border-color: transparent; }
+.status.pending { color: var(--rust); background: var(--ember-soft); }
+.summary { max-width: 70ch; }
+.group { margin-top: 0.75rem; }
+
+.results { margin: 0; display: grid; gap: 0.75rem; background: var(--cream); border: 1px solid var(--rule); border-radius: 14px; padding: 1rem 1.15rem; }
+.metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.25rem; margin: 0; }
+.metrics div { display: grid; gap: 0.15rem; }
+.metrics dt { order: 2; font-size: var(--t-xs); color: var(--cocoa); line-height: 1.35; }
+.metrics dd { order: 1; margin: 0; font-family: var(--sans); font-size: 1.75rem; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em; color: var(--rust); font-variant-numeric: lining-nums; }
+.results figcaption { font-size: var(--t-xs); color: var(--cocoa); border-top: 1px solid var(--rule); padding-top: 0.625rem; }
+@container (min-width: 44rem) { .metrics { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); } }
+
+.flow { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; counter-reset: step; }
+.flow li { display: flex; align-items: center; gap: 0.5rem; counter-increment: step; font-size: var(--t-xs); }
+.flow li span { display: inline-flex; align-items: baseline; gap: 0.4rem; border: 1px solid var(--rule-strong); background: var(--cream); border-radius: 999px; padding: 0.3rem 0.75rem; line-height: 1.35; }
+.flow li span::before { content: counter(step); font-weight: 800; color: var(--ember); }
+.flow li:not(:last-child)::after { content: "\2192"; color: var(--outline); }
+
+.fl { margin: 0; display: grid; gap: 0.875rem; background: var(--cream); border: 1px solid var(--rule); border-radius: 14px; padding: 1.125rem; }
+.fl-body { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.5rem; }
+.fl-sites { display: grid; gap: 0.5rem; }
+.fl-node { display: grid; gap: 0.1rem; border: 1px solid var(--rule-strong); border-radius: 12px; padding: 0.5rem 0.8rem; background: var(--paper); }
+.fl-node b { font-size: var(--t-sm); font-weight: 700; }
+.fl-node span { font-size: var(--t-xs); color: var(--cocoa); line-height: 1.35; }
+.fl-node.server { border-color: var(--ember); background: var(--ember-soft); }
+.fl-node.server b { color: var(--rust); }
+.fl-links { position: relative; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25rem 1.25rem; font-family: var(--mono); font-size: 0.6875rem; color: var(--cocoa); padding-block: 0.25rem; }
+.fl-links svg { display: none; color: var(--ember); }
+.fl-links .send::before { content: "\2193  "; color: var(--ember); }
+.fl-links .back::before { content: "\2191  "; color: var(--ember); }
+.fl figcaption { font-size: var(--t-xs); color: var(--cocoa); border-top: 1px solid var(--rule); padding-top: 0.625rem; }
+@container (min-width: 40rem) {
+  .fl-body { grid-template-columns: minmax(0, 1fr) 8.5rem minmax(0, 0.85fr); align-items: center; gap: 0; }
+  .fl-links { align-self: stretch; flex-direction: column; flex-wrap: nowrap; align-items: center; justify-content: center; gap: 1.75rem; }
+  .fl-links svg { display: block; position: absolute; inset: 0; width: 100%; height: 100%; }
+  .fl-links span { position: relative; background: var(--cream); padding: 0.1rem 0.35rem; }
+  .fl-links .send::before { content: none; }
+  .fl-links .send::after { content: "  \2192"; color: var(--ember); }
+  .fl-links .back::before { content: "\2190  "; }
+}
+
+.contrib { font-size: var(--t-sm); }
+.contrib b { font-weight: 700; }
+.actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.act {
+  display: inline-flex; align-items: center; gap: 0.35rem; cursor: pointer; text-decoration: none;
+  font-size: 0.8125rem; font-weight: 600; border: 1px solid var(--rule-strong); background: transparent; color: var(--espresso);
+  padding: 0.3rem 0.85rem; border-radius: 999px;
+}
+.act:hover { border-color: var(--ember); color: var(--rust); }
+.act[aria-expanded="true"] { background: var(--ember-soft); border-color: var(--ember); color: var(--rust); }
+.bib { position: relative; background: var(--cream); border: 1px solid var(--rule); border-radius: 14px; }
+.bib pre { margin: 0; padding: 0.9rem 1rem; overflow-x: auto; font-family: var(--mono); font-size: 0.75rem; line-height: 1.6; color: var(--espresso); }
+.bib .btn-small { position: absolute; top: 0.5rem; right: 0.5rem; }
+
+/* timeline entries */
+.timeline { display: grid; gap: 2.25rem; border-left: 1px solid var(--rule-strong); padding-left: 1.75rem; margin-left: 0.4rem; }
+.tl-item { position: relative; display: grid; gap: 0.5rem; }
+.tl-item::before { content: ""; position: absolute; left: calc(-1.75rem - 6.5px); top: 0.45rem; width: 12px; height: 12px; border-radius: 50%; background: var(--cream); border: 2px solid var(--ember); }
+.tl-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.25rem 1rem; }
+.tl-title { font-family: var(--sans); font-weight: 700; font-size: 1.1875rem; }
+.when { font-size: var(--t-xs); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ember); white-space: nowrap; }
+.where { font-size: var(--t-sm); color: var(--cocoa); }
+.points { display: grid; gap: 0.4rem; padding-left: 1.15rem; max-width: 72ch; }
+.points li::marker { color: var(--ember); }
+
+/* education */
+.edu { display: grid; gap: 0.75rem; }
+.coursework { list-style: none; display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.coursework li { font-size: var(--t-xs); font-weight: 600; border: 1px solid var(--rule-strong); border-radius: 999px; padding: 0.25rem 0.8rem; background: var(--cream); }
+
+/* projects */
+.projects { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+@container (min-width: 46rem) { .projects { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.project {
+  display: grid; grid-template-rows: auto auto auto 1fr; gap: 0.75rem; min-width: 0;
+  border-radius: 24px; padding: 1.5rem; border: 1px solid transparent;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.project:nth-child(1) { background: var(--peach); }
+.project:nth-child(2) { background: var(--sand); }
+.project:nth-child(3) { background: var(--sage); }
+.project:hover { transform: translateY(-4px); box-shadow: 0 18px 34px -24px rgba(42, 26, 18, 0.45); }
+.project h3 { font-family: var(--sans); font-weight: 700; font-size: 1.125rem; }
+.project p { font-size: var(--t-sm); }
+.project .tag { background: rgba(255, 251, 246, 0.7); border-color: transparent; }
+.project-icon { width: 2.75rem; height: 2.75rem; border-radius: 50%; display: grid; place-items: center; background: var(--paper); color: var(--rust); }
+.project-icon svg { width: 1.35rem; height: 1.35rem; }
+
+/* skills */
+.skills { display: grid; margin: 0; }
+.skills div { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.25rem; padding-block: 0.9rem; border-bottom: 1px solid var(--rule); }
+.skills div:first-child { padding-top: 0; }
+.skills div:last-child { border-bottom: 0; padding-bottom: 0; }
+.skills dt { font-weight: 700; font-size: var(--t-sm); }
+.skills dd { margin: 0; font-size: var(--t-sm); }
+@container (min-width: 36rem) { .skills div { grid-template-columns: 11rem minmax(0, 1fr); gap: 1.5rem; } }
+.sep { color: var(--outline); padding-inline: 0.2rem; }
+
+/* contact */
+.contact-card { display: grid; gap: 1.25rem; justify-items: start; background: var(--espresso); color: var(--cream); border-radius: 28px; padding: clamp(1.75rem, 5vw, 3rem); position: relative; overflow: hidden; }
+.contact-card::after { content: ""; position: absolute; right: -6rem; top: -6rem; width: 18rem; height: 18rem; border-radius: 50%; background: radial-gradient(closest-side, rgba(236, 128, 52, 0.45), transparent); pointer-events: none; }
+.contact-card h3 { font-family: var(--display); font-weight: 600; font-size: clamp(1.75rem, 4vw, 2.75rem); color: var(--cream); position: relative; }
+.contact-card p { max-width: 52ch; color: #E9D9CA; position: relative; }
+.email-row { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; position: relative; min-width: 0; }
+.email { font-family: var(--mono); font-size: var(--t-sm); color: var(--cream); overflow-wrap: anywhere; text-decoration-color: rgba(251, 244, 236, 0.4); }
+.contact-card .btn-small { background: transparent; color: #E9D9CA; border-color: rgba(251, 244, 236, 0.35); }
+.contact-card .btn-small:hover { color: var(--cream); border-color: var(--cream); }
+.contact-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; position: relative; }
+.contact-rows { display: grid; gap: 0.6rem; position: relative; }
+.contact-label { width: 5.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #E9A27A; }
+.contact-card .pill-solid { background: var(--cream); color: var(--espresso); border-color: var(--cream); }
+.contact-card .pill-solid:hover { background: #F3D7C2; border-color: #F3D7C2; }
+.contact-card .pill-outline { border-color: rgba(251, 244, 236, 0.5); color: var(--cream); }
+.contact-card .pill-outline:hover { background: var(--cream); color: var(--espresso); }
+.contact-card a:focus-visible, .contact-card button:focus-visible { outline-color: var(--cream); }
+
+/* footer */
+.foot { padding-block: 0 2.5rem; }
+.foot-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 1.5rem; font-size: var(--t-xs); color: var(--cocoa); padding-top: 1.25rem; }
+.foot-links { display: flex; gap: 1.25rem; }
+
+/* ---------- narrow screens ---------- */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "photo" "left" "right" "note" "cta";
+    justify-items: center; row-gap: 1.25rem;
+  }
+  .badge { display: none; }
+  .hero-photo { max-width: 14.5rem; margin-bottom: 1.25rem; }
+  .blob { left: -16%; }
+  .t-left, .t-right { justify-self: center; text-align: center; }
+  .t-right { justify-items: center; }
+  .hero-note { max-width: 24rem; }
+  .asterisk { display: none; }
+}
+@media (max-width: 760px) {
+  .topbar-inner { flex-wrap: wrap; }
+  .nav { order: 3; width: 100%; overflow-x: auto; gap: 1.25rem; padding-bottom: 0.25rem; scrollbar-width: none; }
+  .nav a { white-space: nowrap; }
+}
+@media (max-width: 560px) {
+  .pub { grid-template-columns: minmax(0, 1fr); gap: 0.85rem; }
+  .pub-venue { grid-auto-flow: column; justify-content: start; align-items: center; gap: 0.6rem; }
+  .news li { grid-template-columns: minmax(0, 1fr); gap: 0.2rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .badge-text, .band-track { animation: none; }
+  *, *::before, *::after { transition: none !important; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="#top" aria-label="Alireza Karami, back to top">
+      <span class="brand-mark" aria-hidden="true">AK</span>
+      <span class="brand-name">Alireza<br>Karami</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+    </nav>
+    <a class="pill-outline pill-small" href="#contact">Contact</a>
+  </div>
+  <div class="wrap"><div class="double-rule"></div></div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top" aria-label="Introduction">
+    <div class="wrap hero-grid">
+      <a class="badge" href="#publications" aria-label="Jump to publications">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <defs><path id="badge-circle" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
+          <circle cx="100" cy="100" r="56" fill="none" stroke="currentColor" stroke-width="1" opacity="0.45"/>
+          <g class="badge-text"><text><textPath href="#badge-circle" textLength="462">AI · DATA SCIENCE · HEALTHCARE · </textPath></text></g>
+          <g class="badge-arrow" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M100 72 V126"/><path d="M89 115 L100 128 L111 115"/>
+          </g>
+        </svg>
+      </a>
+
+      <figure class="hero-photo">
+        <span class="blob" aria-hidden="true"></span>
+        <img src="assets/portrait.webp" alt="Portrait of Alireza Karami" width="560" height="800" fetchpriority="high">
+      </figure>
+
+      <div class="hero-note">
+        <span class="asterisk" aria-hidden="true">*</span>
+        <p>I study how machine learning can support clinical decisions while keeping patient data private.</p>
+        <p class="hero-affil">Computer Science (AI) with an extension in Data Science, Taylor's University, Malaysia</p>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="visually-hidden">Alireza Karami, </span>
+        <span class="t-left"><span class="grad">AI</span><span class="dash" aria-hidden="true"></span></span>
+        <span class="t-right"><span class="grad-rev">Researcher</span><span class="t-sub grad">for Healthcare</span></span>
+      </h1>
+
+      <div class="hero-cta">
+        <a class="pill-solid" href="#publications">View research ↓</a>
+        <!-- hosted-only:start -->
+        <a class="pill-outline" href="assets/Alireza_Karami_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+        <!-- hosted-only:end -->
+      </div>
+    </div>
+  </section>
+
+  <div class="band" aria-hidden="true">
+    <div class="band-track">
+      <div class="band-group">
+        <span class="band-word">Research</span><span class="band-line"></span>
+        <span class="band-word">Publications</span><span class="band-line"></span>
+        <span class="band-word">Experience</span><span class="band-line"></span>
+        <span class="band-word">Projects</span><span class="band-line"></span>
+      </div>
+      <div class="band-group">
+        <span class="band-word">Research</span><span class="band-line"></span>
+        <span class="band-word">Publications</span><span class="band-line"></span>
+        <span class="band-word">Experience</span><span class="band-line"></span>
+        <span class="band-word">Projects</span><span class="band-line"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap content">
+
+    <ul class="stats" aria-label="At a glance">
+      <li class="stat"><b class="grad">3</b><span>research papers, two as first author</span></li>
+      <li class="stat"><b class="grad">1</b><span>accepted at ICCRD 2027, Singapore</span></li>
+      <li class="stat"><b class="grad">0.95</b><span>AUC for seizure-risk prediction (XGBoost)</span></li>
+      <li class="stat"><b class="grad">7 yrs</b><span>on Iran's national badminton team</span></li>
+    </ul>
+
+    <section id="about" class="sec" aria-labelledby="about-h">
+      <h2 id="about-h" class="sec-title">About</h2>
+      <div class="about-grid">
+        <div class="prose">
+          <p>I am a Computer Science undergraduate at Taylor's University in Malaysia, specialising in Artificial Intelligence with an extension in Data Science. I expect to graduate in February 2028.</p>
+          <p>Under the supervision of Dr. Soobia Saeed, I am first author of two papers and co-first author of one. One has been accepted at ICCRD 2027 and two are under peer review. They cover a federated-learning system that trains medical-image classifiers without sharing patient data, explainable prediction of seizures after traumatic brain injury, and an analytics framework with dashboards for emergency departments.</p>
+          <p>I also work part-time as a lab assistant at the Vortex Lab, where I set up and test extended-reality headsets, including Meta Quest and Microsoft HoloLens.</p>
+          <p>From 2012 to 2024 I competed in badminton, including seven years on Iran's national team. Training at that level taught me the discipline and persistence I now bring to research.</p>
+        </div>
+        <aside class="card interests" aria-labelledby="int-h">
+          <p class="eyebrow" id="int-h">Research interests</p>
+          <ul>
+            <li>Explainable AI for clinical decision support</li>
+            <li>Federated and privacy-preserving machine learning</li>
+            <li>Medical image analysis</li>
+            <li>Healthcare data science and operations analytics</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="news" class="sec" aria-labelledby="news-h">
+      <h2 id="news-h" class="sec-title">News</h2>
+      <ol class="news">
+        <li>
+          <time datetime="2027-01">Jan 2027</time>
+          <p><span class="chip">Upcoming</span>Presenting our emergency-department analytics framework at <a href="https://www.iccrd.org/" target="_blank" rel="noopener">ICCRD 2027</a> in Singapore.</p>
+        </li>
+        <li>
+          <time datetime="2026">2026</time>
+          <p>Submitted two first-author papers for peer review: MediPro, a federated-learning system for medical imaging, and a study of seizure-risk prediction in traumatic brain injury (AiMH 2027).</p>
+        </li>
+        <li>
+          <time datetime="2025-09">Sep 2025</time>
+          <p>Joined the Vortex Lab at Taylor's University as a part-time lab assistant.</p>
+        </li>
+        <li>
+          <time datetime="2025-07">Jul 2025</time>
+          <p>Won silver in men's doubles at the Taylor's University Badminton Competition.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="publications" class="sec" aria-labelledby="pubs-h">
+      <h2 id="pubs-h" class="sec-title">Publications</h2>
+      <p class="note">* Equal contribution (co-first authors). All papers supervised by Dr. Soobia Saeed.</p>
+
+      <h3 class="eyebrow group">Accepted</h3>
+      <div class="pubs">
+        <article class="pub" aria-labelledby="p1-title">
+          <div class="pub-venue">
+            <span class="abbr">ICCRD</span>
+            <span class="yr">2027</span>
+          </div>
+          <div class="pub-body">
+            <h4 class="pub-title" id="p1-title">An Intelligent Healthcare Analytics Framework for Emergency Department Optimization Using AI and Visual Dashboards</h4>
+            <div class="meta">
+              <p><strong>Alireza Karami</strong>*, et al.</p>
+              <p class="venue"><em>19th International Conference on Computer Research and Development (ICCRD 2027)</em>, Singapore, 15–17 January 2027.</p>
+            </div>
+            <div class="tags">
+              <span class="status">Accepted</span>
+              <span class="tag">Co-first author</span>
+              <span class="tag">Healthcare analytics</span>
+              <span class="tag">Dashboards</span>
+            </div>
+            <p class="summary">An AI-based analytics framework for emergency-department operations. Interactive visual dashboards support patient-flow monitoring, resource allocation and day-to-day operational decisions.</p>
+            <ol class="flow" aria-label="Framework, step by step">
+              <li><span>Emergency-department data</span></li>
+              <li><span>AI-based analytics</span></li>
+              <li><span>Interactive dashboards</span></li>
+              <li><span>Patient-flow and resource decisions</span></li>
+            </ol>
+            <p class="contrib"><b>My contribution:</b> research design, literature review, data analysis, dashboard development and manuscript preparation.</p>
+            <div class="actions">
+              <button type="button" class="act" aria-expanded="false" aria-controls="bib-iccrd">BibTeX</button>
+              <a class="act" href="https://www.iccrd.org/" target="_blank" rel="noopener">Conference site ↗</a>
+            </div>
+            <div class="bib" id="bib-iccrd" hidden>
+<pre><code id="bib-iccrd-code">@inproceedings{karami2027emergency,
+  title     = {An Intelligent Healthcare Analytics Framework for Emergency
+               Department Optimization Using {AI} and Visual Dashboards},
+  author    = {Karami, Alireza and others},
+  booktitle = {Proceedings of the 19th International Conference on
+               Computer Research and Development (ICCRD 2027)},
+  address   = {Singapore},
+  year      = {2027},
+  note      = {Accepted, to appear}
+}</code></pre>
+              <button type="button" class="btn-small" data-copy-from="bib-iccrd-code">Copy</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="eyebrow group">Under review</h3>
+      <div class="pubs">
+        <article class="pub" aria-labelledby="p2-title">
+          <div class="pub-venue">
+            <span class="abbr">MediPro</span>
+            <span class="yr">2026</span>
+          </div>
+          <div class="pub-body">
+            <h4 class="pub-title" id="p2-title">MediPro: A Privacy-Preserving AI-Based Federated Learning System for Neurosurgical Disease Prediction and Clinical Decision Support</h4>
+            <div class="meta">
+              <p><strong>Alireza Karami</strong> (first author), et al.</p>
+              <p class="venue">Manuscript under peer review, 2026.</p>
+            </div>
+            <div class="tags">
+              <span class="status pending">Under review</span>
+              <span class="tag">First author</span>
+              <span class="tag">Federated learning</span>
+              <span class="tag">Medical imaging</span>
+            </div>
+            <p class="summary">A clinical decision support system that trains a shared medical-image classifier across hospitals without exchanging patient data. Each simulated hospital fine-tunes a DenseNet121 model on its own images, and only the model weights are combined, using Federated Averaging (FedAvg).</p>
+            <figure class="results">
+              <dl class="metrics">
+                <div><dt>Classification accuracy</dt><dd>75–80%</dd></div>
+                <div><dt>Prediction time</dt><dd>2–3 s</dd></div>
+                <div><dt>Disease areas: brain tumour, bone fracture, skin</dt><dd>3</dd></div>
+              </dl>
+              <figcaption>Measured under controlled conditions with simulated clients. The prototype is secured with AES-256 and TLS encryption, role-based access control and audit logging.</figcaption>
+            </figure>
+            <figure class="fl" aria-label="How MediPro trains a shared model">
+              <div class="fl-body">
+                <div class="fl-sites">
+                  <div class="fl-node"><b>Hospital A</b><span>Local images, DenseNet121</span></div>
+                  <div class="fl-node"><b>Hospital B</b><span>Local images, DenseNet121</span></div>
+                  <div class="fl-node"><b>Hospital C</b><span>Local images, DenseNet121</span></div>
+                </div>
+                <div class="fl-links">
+                  <svg viewBox="0 0 100 300" preserveAspectRatio="none" aria-hidden="true">
+                    <g fill="none" stroke="currentColor" stroke-width="1.25" opacity="0.6">
+                      <path d="M0 50 C 50 50, 50 150, 100 150" vector-effect="non-scaling-stroke"/>
+                      <path d="M0 150 L 100 150" vector-effect="non-scaling-stroke"/>
+                      <path d="M0 250 C 50 250, 50 150, 100 150" vector-effect="non-scaling-stroke"/>
+                    </g>
+                  </svg>
+                  <span class="send">weights only</span>
+                  <span class="back">global model</span>
+                </div>
+                <div class="fl-node server"><b>FedAvg server</b><span>Averages the hospitals' weights into one global model</span></div>
+              </div>
+              <figcaption>Patient images never leave each simulated hospital. Only model weights reach the server, which averages them and sends the improved model back.</figcaption>
+            </figure>
+            <p class="contrib"><b>My contribution:</b> first author; proposed the system and designed its architecture (Django back end, MongoDB database, mobile front end).</p>
+          </div>
+        </article>
+
+        <article class="pub" aria-labelledby="p3-title">
+          <div class="pub-venue">
+            <span class="abbr">AiMH</span>
+            <span class="yr">2027</span>
+          </div>
+          <div class="pub-body">
+            <h4 class="pub-title" id="p3-title">Multimodal Artificial Intelligence for Personalized Seizure Risk Stratification and Clinical Decision Support in Traumatic Brain Injury</h4>
+            <div class="meta">
+              <p><strong>Alireza Karami</strong> (first author), et al.</p>
+              <p class="venue">Submitted to the <em>3rd International Conference on AI in Medicine and Healthcare (AiMH 2027)</em>, Malé, Maldives.</p>
+            </div>
+            <div class="tags">
+              <span class="status pending">Under review</span>
+              <span class="tag">First author</span>
+              <span class="tag">Explainable AI</span>
+              <span class="tag">Clinical decision support</span>
+            </div>
+            <p class="summary">An AI clinical decision support system (AI-CDSS) that predicts post-traumatic seizures and clinical outcomes in patients with traumatic brain injury, and explains each prediction so that risk can be stratified for the individual patient.</p>
+            <figure class="results">
+              <dl class="metrics">
+                <div><dt>Accuracy, best model</dt><dd>≈92%</dd></div>
+                <div><dt>AUC, best model</dt><dd>0.95</dd></div>
+                <div><dt>Algorithms compared</dt><dd>4</dd></div>
+                <div><dt>Cross-validation folds (stratified)</dt><dd>5</dd></div>
+              </dl>
+              <figcaption>Best model: XGBoost, compared against logistic regression, random forest and SVM under stratified five-fold cross-validation.</figcaption>
+            </figure>
+            <ol class="flow" aria-label="Method, step by step">
+              <li><span>Multimodal patient data</span></li>
+              <li><span>LR, RF, SVM and XGBoost</span></li>
+              <li><span>Stratified 5-fold CV</span></li>
+              <li><span>SHAP feature attribution</span></li>
+              <li><span>Personalised risk stratification</span></li>
+            </ol>
+            <p class="contrib"><b>My contribution:</b> data analysis, model evaluation and manuscript preparation.</p>
+            <div class="actions">
+              <a class="act" href="https://aimh-conference.com/" target="_blank" rel="noopener">Conference site ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="sec" aria-labelledby="exp-h">
+      <h2 id="exp-h" class="sec-title">Experience</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-head">
+            <h3 class="tl-title">Undergraduate Researcher, AI for Healthcare</h3>
+            <span class="when">2026 – Present</span>
+          </div>
+          <p class="where">Supervised by Dr. Soobia Saeed</p>
+          <ul class="points">
+            <li>First author of MediPro, a federated-learning system that trains a shared medical-image classifier across simulated hospitals without exchanging patient data (DenseNet121 with FedAvg, 75–80% accuracy).</li>
+            <li>First author of a seizure-risk prediction study in traumatic brain injury: compared four classifiers under stratified five-fold cross-validation and used SHAP to explain the best model's predictions (XGBoost, AUC 0.95).</li>
+            <li>Co-first author of an AI analytics framework with interactive dashboards for emergency-department patient flow and resource allocation, accepted at ICCRD 2027.</li>
+          </ul>
+        </div>
+        <div class="tl-item">
+          <div class="tl-head">
+            <h3 class="tl-title">Part-Time Lab Assistant</h3>
+            <span class="when">Sep 2025 – Present</span>
+          </div>
+          <p class="where">Vortex Lab, Taylor's University, Malaysia</p>
+          <ul class="points">
+            <li>Work hands-on with extended-reality headsets, including Meta Quest and Microsoft HoloLens, setting up and testing the devices for lab projects.</li>
+            <li>Set up, maintain and organise laboratory equipment and computing resources, and pre-process data for ongoing lab activities.</li>
+            <li>Help students during lab sessions by troubleshooting programming and technical problems.</li>
+            <li>Work with lab members and supervisors on documentation and shared technical work.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="sec" aria-labelledby="edu-h">
+      <h2 id="edu-h" class="sec-title">Education</h2>
+      <div class="card edu">
+        <div class="tl-head">
+          <h3 class="tl-title">Bachelor of Computer Science (Artificial Intelligence), Extension in Data Science</h3>
+          <span class="when">Expected Feb 2028</span>
+        </div>
+        <p class="where">Taylor's University, Selangor, Malaysia</p>
+        <p class="eyebrow" style="margin-top:0.5rem">Relevant coursework</p>
+        <ul class="coursework">
+          <li>Data Mining</li>
+          <li>Data Science Principles</li>
+          <li>Big Data Technologies</li>
+          <li>Computer Vision and Natural Language Processing</li>
+          <li>Computer Cognitive Applications</li>
+          <li>Advanced Programming</li>
+          <li>Data Structures and Algorithms</li>
+          <li>Database Systems</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="sec" aria-labelledby="proj-h">
+      <h2 id="proj-h" class="sec-title">Projects</h2>
+      <div class="projects">
+        <article class="project">
+          <div class="project-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5s-3.5 4-3.5 6.3a3.5 3.5 0 0 0 7 0c0-2.3-3.5-6.3-3.5-6.3z"/><path d="M2 16c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5"/><path d="M2 20.5c2 0 2-1.5 4-1.5s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5"/></svg></div>
+          <h3>Flood Management System</h3>
+          <div class="tags"><span class="tag">Personal project</span><span class="tag">Linux</span><span class="tag">Cloudera / Hadoop</span></div>
+          <p>Reviewed approaches to controlling and managing flood risk, then built a data-processing workflow on the Cloudera platform using Linux command-line tools.</p>
+        </article>
+        <article class="project">
+          <div class="project-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10a3 3 0 1 0-3-3"/><path d="M3 12h15a3 3 0 1 1-3 3"/><path d="M3 16h7"/></svg></div>
+          <h3>Air Pollution Control System</h3>
+          <div class="tags"><span class="tag">Course project</span><span class="tag">Java</span></div>
+          <p>A Java application for monitoring air-pollution levels and for managing and analysing air-quality data.</p>
+        </article>
+        <article class="project">
+          <div class="project-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M6.5 6.5h.01"/><path d="M9.5 6.5h.01"/></svg></div>
+          <h3>Website Prototype</h3>
+          <div class="tags"><span class="tag">Course project</span><span class="tag">Web</span><span class="tag">UI design</span></div>
+          <p>Planned the layout and user interface of a website, then built a working prototype of its core features using object-oriented design.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="sec" aria-labelledby="skills-h">
+      <h2 id="skills-h" class="sec-title">Skills</h2>
+      <dl class="skills card">
+        <div><dt>Programming</dt><dd>Python<span class="sep">·</span>Java<span class="sep">·</span>JavaScript<span class="sep">·</span>R</dd></div>
+        <div><dt>Machine learning</dt><dd>CNNs<span class="sep">·</span>Transfer learning (DenseNet121)<span class="sep">·</span>Federated learning (FedAvg)<span class="sep">·</span>XGBoost<span class="sep">·</span>Random forest<span class="sep">·</span>SVM<span class="sep">·</span>Logistic regression</dd></div>
+        <div><dt>Research methods</dt><dd>Stratified k-fold cross-validation<span class="sep">·</span>SHAP explainability<span class="sep">·</span>Literature review<span class="sep">·</span>Manuscript preparation</dd></div>
+        <div><dt>Data and systems</dt><dd>Data analysis<span class="sep">·</span>Data mining<span class="sep">·</span>Visual dashboards<span class="sep">·</span>Cloudera (Hadoop)<span class="sep">·</span>Google Colab<span class="sep">·</span>Linux command line</dd></div>
+        <div><dt>Web development</dt><dd>HTML<span class="sep">·</span>CSS<span class="sep">·</span>Next.js<span class="sep">·</span>Django<span class="sep">·</span>MongoDB</dd></div>
+        <div><dt>Extended reality</dt><dd>Meta Quest<span class="sep">·</span>Microsoft HoloLens</dd></div>
+        <div><dt>Languages</dt><dd>Persian (native)<span class="sep">·</span>English (professional working proficiency, IELTS Academic 6.5, 2024)<span class="sep">·</span>Japanese (beginner)</dd></div>
+        <div><dt>Certifications</dt><dd>Introduction to Agents, Mercor</dd></div>
+      </dl>
+    </section>
+
+    <section id="athletics" class="sec" aria-labelledby="ath-h">
+      <h2 id="ath-h" class="sec-title">Athletics and Coaching</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-head">
+            <h3 class="tl-title">National Badminton Athlete, Iran</h3>
+            <span class="when">2012 – 2024</span>
+          </div>
+          <p class="where">Seven years as a member of Iran's national badminton team</p>
+          <ul class="points">
+            <li>Asian youth badminton championship, Indonesia (2016)</li>
+            <li>Badminton Asia Championships, Wuhan, China (2017)</li>
+            <li>International competition representing the national team, Baku, Azerbaijan (2018)</li>
+            <li>Fajr International Badminton Tournament, Iran</li>
+          </ul>
+        </div>
+        <div class="tl-item">
+          <div class="tl-head">
+            <h3 class="tl-title">Silver Medal, Men's Doubles</h3>
+            <span class="when">Jul 2025</span>
+          </div>
+          <p class="where">Taylor's University Badminton Competition</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-head">
+            <h3 class="tl-title">Badminton Coach</h3>
+          </div>
+          <p>Coached players for several years, focusing on skill development, training discipline and readiness for competition.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="sec" aria-labelledby="contact-h">
+      <h2 id="contact-h" class="sec-title">Contact</h2>
+      <div class="contact-card">
+        <h3>Let's talk research</h3>
+        <p>If you would like to discuss my work, a collaboration or an opportunity, I would be glad to hear from you.</p>
+        <div class="contact-rows">
+          <div class="email-row">
+            <span class="contact-label">Email</span>
+            <a class="email" href="mailto:alireza1708karami@gmail.com" id="email-text">alireza1708karami@gmail.com</a>
+            <button type="button" class="btn-small" data-copy-from="email-text" aria-label="Copy email address">Copy</button>
+          </div>
+          <div class="email-row">
+            <span class="contact-label">WhatsApp</span>
+            <a class="email" href="https://wa.me/601164557105" target="_blank" rel="noopener" id="wa-text">+60 11-6455 7105</a>
+            <button type="button" class="btn-small" data-copy-from="wa-text" aria-label="Copy WhatsApp number">Copy</button>
+          </div>
+        </div>
+        <div class="contact-actions">
+          <a class="pill-solid" href="mailto:alireza1708karami@gmail.com">Send an email</a>
+          <a class="pill-outline" href="https://wa.me/601164557105" target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
+          <a class="pill-outline" href="https://github.com/alireza1708karami-collab" target="_blank" rel="noopener me">GitHub ↗</a>
+          <!-- hosted-only:start -->
+          <a class="pill-outline" href="assets/Alireza_Karami_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+          <!-- hosted-only:end -->
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="double-rule"></div>
+    <div class="foot-inner">
+      <span>© 2026 Alireza Karami · Last updated October 2026</span>
+      <span class="foot-links"><a href="https://github.com/alireza1708karami-collab" target="_blank" rel="noopener">GitHub</a><a href="#top">Back to top ↑</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // Copy buttons: copy the text of the element named in data-copy-from.
+  document.querySelectorAll("[data-copy-from]").forEach(function (btn) {
+    var src = document.getElementById(btn.getAttribute("data-copy-from"));
+    if (!src) return;
+    var label = btn.textContent;
+    var timer;
+    function flash(msg) {
+      btn.textContent = msg;
+      clearTimeout(timer);
+      timer = setTimeout(function () { btn.textContent = label; }, 1800);
+    }
+    function selectSource() {
+      var range = document.createRange();
+      range.selectNodeContents(src);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      flash("Selected");
+    }
+    btn.addEventListener("click", function () {
+      var text = src.textContent.trim();
+      try {
+        navigator.clipboard.writeText(text).then(function () { flash("Copied"); }, selectSource);
+      } catch (e) {
+        selectSource();
+      }
+    });
+  });
+
+  // BibTeX toggles.
+  document.querySelectorAll("button[aria-controls][aria-expanded]").forEach(function (btn) {
+    var panel = document.getElementById(btn.getAttribute("aria-controls"));
+    if (!panel) return;
+    btn.addEventListener("click", function () {
+      var open = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!open));
+      panel.hidden = open;
+    });
+  });
+
+  // Underline the section currently in view in the top navigation.
+  var links = Array.prototype.slice.call(document.querySelectorAll(".nav a"));
+  if (!("IntersectionObserver" in window) || !links.length) return;
+  var byId = {};
+  links.forEach(function (a) { byId[a.getAttribute("href").slice(1)] = a; });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      links.forEach(function (a) { a.removeAttribute("aria-current"); });
+      var link = byId[entry.target.id];
+      if (link) link.setAttribute("aria-current", "true");
+    });
+  }, { rootMargin: "-30% 0px -60% 0px" });
+  ["about", "news", "publications", "experience", "education", "projects", "skills", "athletics", "contact"].forEach(function (id) {
+    var section = document.getElementById(id);
+    if (section) observer.observe(section);
+  });
+})();
+</script>
+</body>
+</html>

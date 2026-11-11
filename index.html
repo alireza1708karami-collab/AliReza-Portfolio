@@ -29,7 +29,7 @@
   "affiliation": { "@type": "CollegeOrUniversity", "name": "Taylor's University", "address": "Selangor, Malaysia" },
   "email": "mailto:alireza1708karami@gmail.com",
   "knowsAbout": ["Machine learning", "Explainable AI", "Federated learning", "Clinical decision support", "Healthcare analytics", "Data science"],
-  "knowsLanguage": ["fa", "en", "ja"],
+  "knowsLanguage": ["fa", "en"],
   "sameAs": ["https://github.com/alireza1708karami-collab"]
 }
 </script>
@@ -497,7 +497,7 @@ button { font: inherit; color: inherit; }
 
     <ul class="stats" aria-label="At a glance">
       <li class="stat"><b class="grad">3</b><span>research papers, two as first author</span></li>
-      <li class="stat"><b class="grad">1</b><span>accepted at ICCRD 2027, Singapore</span></li>
+      <li class="stat"><b class="grad">2</b><span>accepted, at ICCRD 2027 and AiMH 2027</span></li>
       <li class="stat"><b class="grad">0.95</b><span>AUC for seizure-risk prediction (XGBoost)</span></li>
       <li class="stat"><b class="grad">7 yrs</b><span>on Iran's national badminton team</span></li>
     </ul>
@@ -507,7 +507,7 @@ button { font: inherit; color: inherit; }
       <div class="about-grid">
         <div class="prose">
           <p>I am a Computer Science undergraduate at Taylor's University in Malaysia, specialising in Artificial Intelligence with an extension in Data Science. I expect to graduate in February 2028.</p>
-          <p>Under the supervision of Dr. Soobia Saeed, I am first author of two papers and co-first author of one. One has been accepted at ICCRD 2027 and two are under peer review. They cover a federated-learning system that trains medical-image classifiers without sharing patient data, explainable prediction of seizures after traumatic brain injury, and an analytics framework with dashboards for emergency departments.</p>
+          <p>Under the supervision of Dr. Soobia Saeed, I am first author of two papers and co-first author of one. Two have been accepted, at ICCRD 2027 and AiMH 2027, and one is under peer review. They cover a federated-learning system that trains medical-image classifiers without sharing patient data, explainable prediction of seizures after traumatic brain injury, and an analytics framework with dashboards for emergency departments.</p>
           <p>I also work part-time as a lab assistant at the Vortex Lab, where I set up and test extended-reality headsets, including Meta Quest and Microsoft HoloLens.</p>
           <p>From 2012 to 2024 I competed in badminton, including seven years on Iran's national team. Training at that level taught me the discipline and persistence I now bring to research.</p>
         </div>
@@ -529,6 +529,10 @@ button { font: inherit; color: inherit; }
         <li>
           <time datetime="2027-01">Jan 2027</time>
           <p><span class="chip">Upcoming</span>Presenting our emergency-department analytics framework at <a href="https://www.iccrd.org/" target="_blank" rel="noopener">ICCRD 2027</a> in Singapore.</p>
+        </li>
+        <li>
+          <time datetime="2026-11">Nov 2026</time>
+          <p>Our seizure-risk prediction paper on traumatic brain injury was accepted at <a href="https://aimh-conference.com/" target="_blank" rel="noopener">AiMH 2027</a> in Malé, Maldives.</p>
         </li>
         <li>
           <time datetime="2026">2026</time>
@@ -595,6 +599,62 @@ button { font: inherit; color: inherit; }
             </div>
           </div>
         </article>
+
+        <article class="pub" aria-labelledby="p3-title">
+          <div class="pub-venue">
+            <span class="abbr">AiMH</span>
+            <span class="yr">2027</span>
+          </div>
+          <div class="pub-body">
+            <h4 class="pub-title" id="p3-title">Multimodal Artificial Intelligence for Personalized Seizure Risk Stratification and Clinical Decision Support in Traumatic Brain Injury</h4>
+            <div class="meta">
+              <p><strong>Alireza Karami</strong> (first author), et al.</p>
+              <p class="venue"><em>3rd International Conference on AI in Medicine and Healthcare (AiMH 2027)</em>, Malé, Maldives.</p>
+            </div>
+            <div class="tags">
+              <span class="status">Accepted</span>
+              <span class="tag">First author</span>
+              <span class="tag">Explainable AI</span>
+              <span class="tag">Clinical decision support</span>
+            </div>
+            <p class="summary">An AI clinical decision support system (AI-CDSS) that predicts post-traumatic seizures and clinical outcomes in patients with traumatic brain injury, and explains each prediction so that risk can be stratified for the individual patient.</p>
+            <figure class="results">
+              <dl class="metrics">
+                <div><dt>Accuracy, best model</dt><dd>≈92%</dd></div>
+                <div><dt>AUC, best model</dt><dd>0.95</dd></div>
+                <div><dt>Algorithms compared</dt><dd>4</dd></div>
+                <div><dt>Cross-validation folds (stratified)</dt><dd>5</dd></div>
+              </dl>
+              <figcaption>Best model: XGBoost, compared against logistic regression, random forest and SVM under stratified five-fold cross-validation.</figcaption>
+            </figure>
+            <ol class="flow" aria-label="Method, step by step">
+              <li><span>Multimodal patient data</span></li>
+              <li><span>LR, RF, SVM and XGBoost</span></li>
+              <li><span>Stratified 5-fold CV</span></li>
+              <li><span>SHAP feature attribution</span></li>
+              <li><span>Personalised risk stratification</span></li>
+            </ol>
+            <p class="contrib"><b>My contribution:</b> data analysis, model evaluation and manuscript preparation.</p>
+            <div class="actions">
+              <button type="button" class="act" aria-expanded="false" aria-controls="bib-aimh">BibTeX</button>
+              <a class="act" href="https://aimh-conference.com/" target="_blank" rel="noopener">Conference site ↗</a>
+            </div>
+            <div class="bib" id="bib-aimh" hidden>
+<pre><code id="bib-aimh-code">@inproceedings{karami2027seizure,
+  title     = {Multimodal Artificial Intelligence for Personalized Seizure
+               Risk Stratification and Clinical Decision Support in
+               Traumatic Brain Injury},
+  author    = {Karami, Alireza and others},
+  booktitle = {Proceedings of the 3rd International Conference on
+               {AI} in Medicine and Healthcare (AiMH 2027)},
+  address   = {Mal{\'e}, Maldives},
+  year      = {2027},
+  note      = {Accepted, to appear}
+}</code></pre>
+              <button type="button" class="btn-small" data-copy-from="bib-aimh-code">Copy</button>
+            </div>
+          </div>
+        </article>
       </div>
 
       <h3 class="eyebrow group">Under review</h3>
@@ -650,47 +710,6 @@ button { font: inherit; color: inherit; }
             <p class="contrib"><b>My contribution:</b> first author; proposed the system and designed its architecture (Django back end, MongoDB database, mobile front end).</p>
           </div>
         </article>
-
-        <article class="pub" aria-labelledby="p3-title">
-          <div class="pub-venue">
-            <span class="abbr">AiMH</span>
-            <span class="yr">2027</span>
-          </div>
-          <div class="pub-body">
-            <h4 class="pub-title" id="p3-title">Multimodal Artificial Intelligence for Personalized Seizure Risk Stratification and Clinical Decision Support in Traumatic Brain Injury</h4>
-            <div class="meta">
-              <p><strong>Alireza Karami</strong> (first author), et al.</p>
-              <p class="venue">Submitted to the <em>3rd International Conference on AI in Medicine and Healthcare (AiMH 2027)</em>, Malé, Maldives.</p>
-            </div>
-            <div class="tags">
-              <span class="status pending">Under review</span>
-              <span class="tag">First author</span>
-              <span class="tag">Explainable AI</span>
-              <span class="tag">Clinical decision support</span>
-            </div>
-            <p class="summary">An AI clinical decision support system (AI-CDSS) that predicts post-traumatic seizures and clinical outcomes in patients with traumatic brain injury, and explains each prediction so that risk can be stratified for the individual patient.</p>
-            <figure class="results">
-              <dl class="metrics">
-                <div><dt>Accuracy, best model</dt><dd>≈92%</dd></div>
-                <div><dt>AUC, best model</dt><dd>0.95</dd></div>
-                <div><dt>Algorithms compared</dt><dd>4</dd></div>
-                <div><dt>Cross-validation folds (stratified)</dt><dd>5</dd></div>
-              </dl>
-              <figcaption>Best model: XGBoost, compared against logistic regression, random forest and SVM under stratified five-fold cross-validation.</figcaption>
-            </figure>
-            <ol class="flow" aria-label="Method, step by step">
-              <li><span>Multimodal patient data</span></li>
-              <li><span>LR, RF, SVM and XGBoost</span></li>
-              <li><span>Stratified 5-fold CV</span></li>
-              <li><span>SHAP feature attribution</span></li>
-              <li><span>Personalised risk stratification</span></li>
-            </ol>
-            <p class="contrib"><b>My contribution:</b> data analysis, model evaluation and manuscript preparation.</p>
-            <div class="actions">
-              <a class="act" href="https://aimh-conference.com/" target="_blank" rel="noopener">Conference site ↗</a>
-            </div>
-          </div>
-        </article>
       </div>
     </section>
 
@@ -705,7 +724,7 @@ button { font: inherit; color: inherit; }
           <p class="where">Supervised by Dr. Soobia Saeed</p>
           <ul class="points">
             <li>First author of MediPro, a federated-learning system that trains a shared medical-image classifier across simulated hospitals without exchanging patient data (DenseNet121 with FedAvg, 75–80% accuracy).</li>
-            <li>First author of a seizure-risk prediction study in traumatic brain injury: compared four classifiers under stratified five-fold cross-validation and used SHAP to explain the best model's predictions (XGBoost, AUC 0.95).</li>
+            <li>First author of a seizure-risk prediction study in traumatic brain injury: compared four classifiers under stratified five-fold cross-validation and used SHAP to explain the best model's predictions (XGBoost, AUC 0.95); accepted at AiMH 2027.</li>
             <li>Co-first author of an AI analytics framework with interactive dashboards for emergency-department patient flow and resource allocation, accepted at ICCRD 2027.</li>
           </ul>
         </div>
@@ -780,7 +799,7 @@ button { font: inherit; color: inherit; }
         <div><dt>Data and systems</dt><dd>Data analysis<span class="sep">·</span>Data mining<span class="sep">·</span>Visual dashboards<span class="sep">·</span>Cloudera (Hadoop)<span class="sep">·</span>Google Colab<span class="sep">·</span>Linux command line</dd></div>
         <div><dt>Web development</dt><dd>HTML<span class="sep">·</span>CSS<span class="sep">·</span>Next.js<span class="sep">·</span>Django<span class="sep">·</span>MongoDB</dd></div>
         <div><dt>Extended reality</dt><dd>Meta Quest<span class="sep">·</span>Microsoft HoloLens</dd></div>
-        <div><dt>Languages</dt><dd>Persian (native)<span class="sep">·</span>English (professional working proficiency, IELTS Academic 6.5, 2024)<span class="sep">·</span>Japanese (beginner)</dd></div>
+        <div><dt>Languages</dt><dd>Persian (native)<span class="sep">·</span>English (professional working proficiency, IELTS Academic 6.5, 2024)</dd></div>
         <div><dt>Certifications</dt><dd>Introduction to Agents, Mercor</dd></div>
       </dl>
     </section>
